@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "VERDEA Brand Palette",
+  "version": "1.0.0",
+  "source": "Golden Screens approved July 2026",
+  "brand": {
+    "forest950": "#032C1B",
+    "forest900": "#073624",
+    "forest800": "#0E4B31",
+    "forest700": "#155E37",
+    "leaf600": "#2E8B57",
+    "leaf500": "#49A66D",
+    "leaf100": "#EAF5ED",
+    "leaf050": "#F4FAF5",
+    "gold500": "#E5C16A",
+    "orange500": "#E89A4A"
+  },
+  "neutral": {
+    "white": "#FFFFFF",
+    "canvas": "#FAFAF8",
+    "surface": "#FFFFFF",
+    "surfaceAlt": "#F4F5F2",
+    "surfaceSoft": "#F8F9F6",
+    "border": "#E3E8E2",
+    "borderStrong": "#CCD5CD",
+    "text": "#161A17",
+    "textSecondary": "#5F6761",
+    "textMuted": "#8A918C",
+    "icon": "#303833"
+  },
+  "status": {
+    "success": "#18864B",
+    "successSoft": "#EAF7EF",
+    "warning": "#D98B1D",
+    "warningSoft": "#FFF5E6",
+    "error": "#D94B45",
+    "errorSoft": "#FFF0EF",
+    "info": "#3A73C6",
+    "infoSoft": "#EDF4FF"
+  },
+  "commerce": {
+    "discount": "#D94B45",
+    "price": "#0E5A34",
+    "rating": "#0E6B3A",
+    "stock": "#138447"
+  },
+  "rules": {
+    "masterSource": "assets/brand/colors/palette.json",
+    "noHardcodedColors": true,
+    "darkSurfacesUse": ["brand.forest950", "brand.forest900"],
+    "primaryAction": "brand.forest700",
+    "primaryActionHover": "brand.forest800"
+  }
+}
