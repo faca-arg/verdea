@@ -1,0 +1,16 @@
+{
+  "name": "verdea",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "storybook": "pnpm --filter @verdea/ui storybook",
+    "build-storybook": "pnpm --filter @verdea/ui build-storybook"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0",
+    "typescript": "^5.8.0"
+  }
+}
