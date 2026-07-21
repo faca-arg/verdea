@@ -1,0 +1,50 @@
+{
+  "name": "VERDEA",
+  "version": "1.0.0",
+  "tagline": "Lleva verde a tu vida",
+  "descriptor": "Sistema operativo para viveros y garden centers",
+  "promise": "Todo tu vivero conectado.",
+  "positioning": "Una plataforma SaaS especializada que une gestión, comercio y relación con clientes para viveros modernos.",
+  "personality": [
+    "natural",
+    "minimalista",
+    "premium",
+    "confiable",
+    "moderna",
+    "humana",
+    "editorial"
+  ],
+  "voice": {
+    "traits": ["clara", "cercana", "optimista", "útil", "serena"],
+    "avoid": ["tecnicismos innecesarios", "agresividad comercial", "frialdad corporativa", "humor forzado"]
+  },
+  "visualDirection": {
+    "density": "comfortable",
+    "contrast": "medium-high",
+    "corners": "soft",
+    "shadows": "subtle",
+    "photography": "editorial, natural, luminosa y realista",
+    "motion": "sutil y funcional"
+  },
+  "officialAssets": {
+    "isotype": "assets/brand/logo/master/verdea-isotype.svg",
+    "wordmark": "assets/brand/logo/master/verdea-wordmark.svg",
+    "horizontalLockup": "assets/brand/logo/master/verdea-lockup-horizontal.svg"
+  },
+  "protectedAssets": [
+    "logo",
+    "wordmark",
+    "tagline",
+    "palette",
+    "typography hierarchy",
+    "golden screen visual language"
+  ],
+  "goldenScreens": [
+    "storefront home",
+    "catalog",
+    "product detail",
+    "checkout",
+    "customer account"
+  ],
+  "scope": "VERDEA only"
+}
