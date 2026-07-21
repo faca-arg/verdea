@@ -1,6 +1,6 @@
 ---
 id: FOUNDATION-000
- title: VERDEA Project Constitution
+title: VERDEA Project Constitution
 version: 1.0.0
 status: Approved
 owner: Founder + Product Architecture
