@@ -20,8 +20,20 @@ Toda persona o agente de IA debe leer:
 4. [Decision Framework](.foundation/DECISION_FRAMEWORK.md)
 5. [Project Blueprint](docs/01-blueprint/PROJECT_BLUEPRINT.md)
 6. [AI Development Charter](.ai/AI_DEVELOPMENT_CHARTER.md)
+7. [Brand Bible](docs/02-brand/BRAND_BIBLE.md)
+8. [Golden Screen Specification](docs/03-design-system/GOLDEN_SCREEN_SPECIFICATION.md)
 
 El estado del sprint se mantiene en [Sprint 0 — Foundation](docs/00-sprints/SPRINT-000-foundation.md).
+
+## Fuentes de verdad visuales
+
+- [Brand metadata](assets/brand/brand.json)
+- [Brand palette](assets/brand/colors/palette.json)
+- [Design tokens](packages/design-tokens/design-tokens.json)
+- [CSS variables](packages/design-tokens/css-variables.css)
+- `assets/brand/logo/master/`: activos maestros del isotipo, wordmark y lockup horizontal.
+
+Ninguna implementación puede inventar colores, reconstruir el logo o modificar jerarquías visuales fuera de estas fuentes.
 
 ## Productos previstos
 
@@ -51,9 +63,9 @@ El estado del sprint se mantiene en [Sprint 0 — Foundation](docs/00-sprints/SP
 
 - [ADR-0001: adoptar un monorepo](docs/adr/ADR-0001-monorepo.md)
 
-## Referencia visual
+## Referencias visuales
 
-La captura de catálogo aprobada en julio de 2026 es la **Golden Screen** y referencia visual canónica. No debe tratarse como inspiración: gobierna estructura, identidad, jerarquía, densidad, componentes y dirección fotográfica del storefront.
+Las pantallas aprobadas de Home, Catálogo, Producto, Checkout y Mi cuenta forman el conjunto de **Golden Screens**. No deben tratarse como inspiración: gobiernan estructura, identidad, jerarquía, densidad, componentes y dirección fotográfica de VERDEA.
 
 ## Stack previsto
 
@@ -73,6 +85,7 @@ La captura de catálogo aprobada en julio de 2026 es la **Golden Screen** y refe
 5. Componentes consistentes y documentados.
 6. Accesibilidad, rendimiento y pruebas visuales obligatorias.
 7. El contexto necesario debe vivir en el repositorio, no en prompts o chats externos.
+8. El proyecto se optimiza exclusivamente para VERDEA.
 
 ## Desarrollo
 
