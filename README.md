@@ -8,9 +8,22 @@ VERDEA conecta gestión, e-commerce, inventario, punto de venta, pedidos, client
 
 ## Estado
 
-Proyecto en fase de fundación de producto y diseño.
+Sprint 0 — Foundation en progreso. Todavía no comenzó la implementación funcional.
 
-## Productos
+## Empezar por acá
+
+Toda persona o agente de IA debe leer:
+
+1. [Project Constitution](.foundation/PROJECT_CONSTITUTION.md)
+2. [Product Operating System](.foundation/PRODUCT_OPERATING_SYSTEM.md)
+3. [Project Manifest](.foundation/PROJECT_MANIFEST.md)
+4. [Decision Framework](.foundation/DECISION_FRAMEWORK.md)
+5. [Project Blueprint](docs/01-blueprint/PROJECT_BLUEPRINT.md)
+6. [AI Development Charter](.ai/AI_DEVELOPMENT_CHARTER.md)
+
+El estado del sprint se mantiene en [Sprint 0 — Foundation](docs/00-sprints/SPRINT-000-foundation.md).
+
+## Productos previstos
 
 - `apps/store`: tienda web pública para clientes.
 - `apps/admin`: panel privado de gestión.
@@ -19,7 +32,7 @@ Proyecto en fase de fundación de producto y diseño.
 - `apps/docs`: documentación navegable.
 - `apps/marketing`: sitio institucional.
 
-## Paquetes compartidos
+## Paquetes compartidos previstos
 
 - `packages/ui`: componentes React de VERDEA.
 - `packages/design-tokens`: colores, tipografía, radios, espaciados y motion.
@@ -34,19 +47,17 @@ Proyecto en fase de fundación de producto y diseño.
 - `packages/testing`: utilidades de pruebas.
 - `packages/utils`: utilidades generales.
 
-## Documentación oficial
+## Decisiones arquitectónicas
 
-- [Project Blueprint](docs/01-blueprint/PROJECT_BLUEPRINT.md)
-- [Design Foundation](docs/03-design-system/DESIGN_FOUNDATION.md)
-- [ADR-0001: Monorepo y documentación versionada](docs/adr/ADR-0001-monorepo.md)
+- [ADR-0001: adoptar un monorepo](docs/adr/ADR-0001-monorepo.md)
 
 ## Referencia visual
 
-La captura de catálogo aprobada en julio de 2026 es la referencia visual canónica. No debe tratarse como inspiración: gobierna estructura, identidad, jerarquía, densidad, componentes y dirección fotográfica del storefront.
+La captura de catálogo aprobada en julio de 2026 es la **Golden Screen** y referencia visual canónica. No debe tratarse como inspiración: gobierna estructura, identidad, jerarquía, densidad, componentes y dirección fotográfica del storefront.
 
 ## Stack previsto
 
-- Next.js, React y TypeScript.
+- Next.js, React y TypeScript strict.
 - Tailwind CSS con estilos VERDEA propios.
 - Radix UI y shadcn/ui únicamente como primitives.
 - NestJS, PostgreSQL, Prisma, Redis y BullMQ.
@@ -61,13 +72,14 @@ La captura de catálogo aprobada en julio de 2026 es la referencia visual canón
 4. Multi-tenancy seguro desde el inicio.
 5. Componentes consistentes y documentados.
 6. Accesibilidad, rendimiento y pruebas visuales obligatorias.
+7. El contexto necesario debe vivir en el repositorio, no en prompts o chats externos.
 
 ## Desarrollo
 
 El repositorio se construirá por etapas:
 
-1. Fundaciones de producto y diseño.
-2. Design system y Storybook.
+1. Fundaciones de producto, IA y diseño.
+2. Design System, tokens y Storybook.
 3. Storefront público.
 4. Backoffice.
 5. API, base de datos e integraciones.
