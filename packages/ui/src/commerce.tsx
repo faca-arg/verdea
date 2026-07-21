@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import clsx from "clsx";
 import { Button, Card } from "./primitives";
 
 export interface ProductCardProps {
@@ -12,10 +13,11 @@ export interface ProductCardProps {
   favoriteAction?: ReactNode;
   onAdd?: () => void;
   addLabel?: string;
+  className?: string;
 }
 
-export function ProductCard({ imageSrc, imageAlt, badge, title, description, price, stock, favoriteAction, onAdd, addLabel = "Agregar" }: ProductCardProps) {
-  return <Card as="article" className="v-product-card"><div className="v-product-card__media"><img src={imageSrc} alt={imageAlt}/>{favoriteAction}</div><div className="v-product-card__body">{badge && <span className="v-product-card__badge">{badge}</span>}<h3 className="v-product-card__title">{title}</h3>{description && <p className="v-product-card__description">{description}</p>}<span className="v-product-card__price">{price}</span>{stock && <span className="v-product-card__stock">{stock}</span>}<Button variant="ghost" size="sm" onClick={onAdd}>{addLabel}</Button></div></Card>;
+export function ProductCard({ imageSrc, imageAlt, badge, title, description, price, stock, favoriteAction, onAdd, addLabel = "Agregar", className }: ProductCardProps) {
+  return <Card as="article" className={clsx("v-product-card", className)}><div className="v-product-card__media"><img src={imageSrc} alt={imageAlt}/>{favoriteAction}</div><div className="v-product-card__body">{badge && <span className="v-product-card__badge">{badge}</span>}<h3 className="v-product-card__title">{title}</h3>{description && <p className="v-product-card__description">{description}</p>}<span className="v-product-card__price">{price}</span>{stock && <span className="v-product-card__stock">{stock}</span>}<Button size="sm" onClick={onAdd}>🛒 {addLabel}</Button></div></Card>;
 }
 
 export interface FilterOption { id: string; label: string; count?: number; checked?: boolean; }
@@ -30,5 +32,5 @@ export interface CheckoutLine { id: string; label: string; value: string; muted?
 export interface CheckoutSummaryProps { title?: string; lines: CheckoutLine[]; total: string; itemCount?: number; couponSlot?: ReactNode; onConfirm?: () => void; loading?: boolean; }
 
 export function CheckoutSummary({ title = "Resumen de tu pedido", lines, total, itemCount, couponSlot, onConfirm, loading }: CheckoutSummaryProps) {
-  return <Card as="aside" className="v-checkout-summary" aria-label={title}><header><strong>{title}{itemCount !== undefined ? ` (${itemCount})` : ""}</strong></header>{couponSlot}{lines.map((line) => <div key={line.id} className="v-checkout-summary__row" style={line.muted ? {color:"var(--text-secondary,#5f6761)"} : undefined}><span>{line.label}</span><span>{line.value}</span></div>)}<div className="v-checkout-summary__row v-checkout-summary__row--total"><span>Total</span><span>{total}</span></div><Button size="lg" onClick={onConfirm} loading={loading}>Confirmar pedido</Button></Card>;
+  return <Card as="aside" className="v-checkout-summary" aria-label={title}><header><strong>{title}{itemCount !== undefined ? ` (${itemCount})` : ""}</strong></header>{couponSlot}{lines.map((line) => <div key={line.id} className="v-checkout-summary__row" style={line.muted ? {color:"var(--color-text-secondary,#5f6761)"} : undefined}><span>{line.label}</span><span>{line.value}</span></div>)}<div className="v-checkout-summary__row v-checkout-summary__row--total"><span>Total</span><span>{total}</span></div><Button size="lg" onClick={onConfirm} loading={loading}>▣ Confirmar pedido</Button></Card>;
 }
