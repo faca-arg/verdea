@@ -12,30 +12,38 @@
   --verdea-orange-500: #e89a4a;
 
   /* Surfaces */
-  --color-canvas: #fafaf8;
-  --color-surface: #ffffff;
+  --color-canvas: #fbfcf9;
+  --color-canvas-deep: #f7f9f5;
+  --color-surface: #fff;
+  --color-surface-warm: #fdfefc;
   --color-surface-subtle: #f4f5f2;
-  --color-surface-soft: #f8f9f6;
+  --color-surface-soft: #f7f8f5;
+  --surface-canvas-render: radial-gradient(circle at 50% 0%, rgba(255,255,255,.96), rgba(250,251,248,.98) 52%, #f7f9f5 100%);
+  --surface-card-render: linear-gradient(180deg, rgba(255,255,255,.985), rgba(253,254,252,.985));
+  --surface-input-render: linear-gradient(180deg, #fff, #fefffd);
 
   /* Text and icons */
-  --color-text-primary: #161a17;
-  --color-text-secondary: #5f6761;
-  --color-text-muted: #8a918c;
-  --color-text-inverse: #ffffff;
-  --color-icon: #303833;
+  --color-text-primary: #151a16;
+  --color-text-secondary: #59625c;
+  --color-text-muted: #858e88;
+  --color-text-inverse: #fff;
+  --color-icon: #26362d;
 
   /* Borders */
-  --color-border-subtle: #e3e8e2;
-  --color-border-strong: #ccd5cd;
+  --color-border-subtle: rgba(17, 67, 40, .10);
+  --color-border-strong: rgba(17, 67, 40, .18);
+  --color-divider: rgba(17, 67, 40, .08);
   --color-focus: #2e8b57;
 
   /* Semantic actions */
   --color-action-primary: #155e37;
   --color-action-primary-hover: #0e4b31;
   --color-action-primary-active: #073624;
-  --color-action-primary-text: #ffffff;
-  --color-action-secondary: #ffffff;
+  --color-action-primary-text: #fff;
+  --color-action-secondary: #fff;
   --color-action-secondary-text: #155e37;
+  --action-primary-render: linear-gradient(180deg, #176f43 0%, #0f5c36 56%, #0b4e2f 100%);
+  --action-primary-hover-render: linear-gradient(180deg, #1b7748 0%, #12643a 58%, #0d5632 100%);
 
   /* Status */
   --color-success: #18864b;
@@ -54,17 +62,19 @@
   --color-rating: #0e6b3a;
 
   /* Typography */
-  --font-display: "Manrope", sans-serif;
-  --font-interface: "Inter", sans-serif;
+  --font-display: "Manrope Variable", "Manrope", sans-serif;
+  --font-interface: "Inter Variable", "Inter", sans-serif;
   --font-editorial: "DM Serif Display", serif;
-  --font-size-xs: 12px;
-  --font-size-sm: 14px;
-  --font-size-md: 16px;
+  --font-size-xs: 11.5px;
+  --font-size-sm: 13px;
+  --font-size-md: 15px;
   --font-size-lg: 18px;
   --font-size-xl: 22px;
   --font-size-2xl: 28px;
   --font-size-3xl: 36px;
   --font-size-4xl: 48px;
+  --tracking-tight: -0.018em;
+  --tracking-ui: -0.006em;
 
   /* Spacing */
   --space-0: 0px;
@@ -84,36 +94,39 @@
   /* Radius */
   --radius-xs: 4px;
   --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 20px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
   --radius-2xl: 24px;
   --radius-pill: 999px;
 
   /* Shadows */
-  --shadow-xs: 0 1px 2px rgba(3, 44, 27, 0.04);
-  --shadow-sm: 0 2px 8px rgba(3, 44, 27, 0.06);
-  --shadow-md: 0 8px 24px rgba(3, 44, 27, 0.08);
-  --shadow-lg: 0 18px 48px rgba(3, 44, 27, 0.11);
+  --shadow-xs: 0 1px 0 rgba(255,255,255,.92) inset, 0 1px 2px rgba(7,54,36,.035);
+  --shadow-sm: 0 1px 0 rgba(255,255,255,.94) inset, 0 2px 8px rgba(7,54,36,.05), 0 8px 24px rgba(7,54,36,.045);
+  --shadow-md: 0 1px 0 rgba(255,255,255,.95) inset, 0 2px 6px rgba(7,54,36,.05), 0 16px 42px rgba(7,54,36,.09);
+  --shadow-lg: 0 1px 0 rgba(255,255,255,.96) inset, 0 6px 18px rgba(7,54,36,.07), 0 24px 58px rgba(7,54,36,.12);
+  --shadow-button: 0 1px 0 rgba(255,255,255,.16) inset, 0 -1px 0 rgba(3,44,27,.20) inset, 0 5px 14px rgba(14,75,49,.14);
+  --shadow-button-hover: 0 1px 0 rgba(255,255,255,.18) inset, 0 -1px 0 rgba(3,44,27,.22) inset, 0 8px 20px rgba(14,75,49,.18);
+  --shadow-focus: 0 0 0 3px rgba(73,166,109,.11), 0 1px 0 rgba(255,255,255,.9) inset;
 
   /* Layout */
   --layout-container-max: 1480px;
   --layout-content-max: 1360px;
   --layout-page-padding: 24px;
   --layout-page-padding-mobile: 16px;
-  --layout-header-main-height: 72px;
-  --layout-header-secondary-height: 48px;
+  --layout-header-main-height: 68px;
+  --layout-header-secondary-height: 46px;
   --layout-account-sidebar-width: 224px;
   --layout-filter-sidebar-width: 196px;
 
   /* Components */
-  --button-height-sm: 36px;
-  --button-height-md: 44px;
-  --button-height-lg: 48px;
-  --button-radius: 10px;
-  --input-height: 44px;
-  --input-radius: 10px;
-  --card-radius: 14px;
+  --button-height-sm: 34px;
+  --button-height-md: 40px;
+  --button-height-lg: 46px;
+  --button-radius: 9px;
+  --input-height: 42px;
+  --input-radius: 9px;
+  --card-radius: 13px;
   --card-padding: 16px;
 
   /* Motion */
