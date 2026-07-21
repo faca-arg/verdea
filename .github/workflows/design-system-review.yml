@@ -1,0 +1,57 @@
+name: Design System Review
+
+on:
+  push:
+    paths:
+      - "apps/docs/**"
+      - "packages/ui/**"
+      - "packages/design-tokens/**"
+      - "package.json"
+      - "pnpm-workspace.yaml"
+      - "turbo.json"
+      - ".github/workflows/design-system-review.yml"
+  pull_request:
+    paths:
+      - "apps/docs/**"
+      - "packages/ui/**"
+      - "packages/design-tokens/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Test UI package
+        run: pnpm --filter @verdea/ui test
+
+      - name: Build internal docs
+        run: pnpm build:docs
+
+      - name: Build Storybook
+        run: pnpm build-storybook
+
+      - name: Upload Storybook artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: verdea-storybook
+          path: packages/ui/storybook-static
+          retention-days: 14
